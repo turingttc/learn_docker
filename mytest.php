@@ -16,4 +16,6 @@ $db = new medoo([
     'charset' => 'utf8'
 ]);
 
-echo $db->info();
+print_r($db->info());
+
+var_dump($_SERVER['REMOTE_ADDR']);
