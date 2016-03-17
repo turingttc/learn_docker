@@ -18,5 +18,5 @@ $db = new medoo([
 
 //print_r($db->info());
 
-$arr = explode(',', getenv['HTTP_X_FORWARDED_FOR']);
+$arr = explode(',', getenv('HTTP_X_FORWARDED_FOR'));
 var_dump($arr[0]);
