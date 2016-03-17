@@ -16,6 +16,13 @@ $db = new medoo([
     'charset' => 'utf8'
 ]);
 
-print_r($db->info());
+//print_r($db->info());
 
-var_dump($_SERVER['REMOTE_ADDR']);
+echo '_SERVER HTTP_X_FORWARDED_FOR====';
+print_r($_SERVER['HTTP_X_FORWARDED_FOR']);
+echo 'getenv(HTTP_X_FORWARDED_FOR)====';
+print_r(getenv("HTTP_X_FORWARDED_FOR"));
+echo 'getenv("HTTP_CLIENT_IP")====';
+print_r(getenv("HTTP_CLIENT_IP"));
+echo 'remote_addr=====';
+print_r(getenv("remote_addr"));
