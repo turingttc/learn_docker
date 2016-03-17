@@ -16,4 +16,4 @@ $result = $db->select('white',[
 ],[
     'user'=>$user
 ]);
-echo json_encode($result);
+echo json_encode($result[0]);
