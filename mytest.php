@@ -18,11 +18,5 @@ $db = new medoo([
 
 //print_r($db->info());
 
-echo '_SERVER HTTP_X_FORWARDED_FOR====';
-print_r($_SERVER['HTTP_X_FORWARDED_FOR']);
-echo 'getenv(HTTP_X_FORWARDED_FOR)====';
-print_r(getenv("HTTP_X_FORWARDED_FOR"));
-echo 'getenv("HTTP_CLIENT_IP")====';
-print_r(getenv("HTTP_CLIENT_IP"));
-echo 'remote_addr=====';
-print_r(getenv("remote_addr"));
+$arr = explode(',', getenv['HTTP_X_FORWARDED_FOR']);
+var_dump($arr[0]);
